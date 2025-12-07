@@ -1,0 +1,253 @@
+.hometestimonials-main{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center  
+}
+.main-hometestimonials{
+    background-color: #FFFFF5;
+
+}
+.hometestimonials-head{
+    align-items: center;
+    color: #031B4E;
+    padding-inline-end: 19%;
+    padding-inline-start: 19%;
+    font-family: var(--heading-font);
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.07em;
+    letter-spacing: -0.7px;
+    padding-bottom: 60px;
+}
+.star-box{
+    display: flex;
+    gap: 10px;
+}
+.fivstar-img{
+    width: 34px;
+    height: 30px;
+}
+.hometestimonials-container{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hometestimonials-box{
+    width: 49%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 30px;
+}
+.hometestimonials-box:hover{
+    transition-duration: .6s;
+    box-shadow: 4px 4px 0px 0px #031B4E;
+}
+.hometestimonial-title{
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    margin: 030px 0px 015px 0px;
+}
+
+.hometestimonial-desc{
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0px 0px 020px 0px;
+}.hometestimonial-user{
+    display: flex;
+    gap: 20px;
+}
+.hometestimonial-user-img{
+    width: 63px;
+    height: 63px;
+}
+.hometestiomnial-name{
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 21px;
+    padding-bottom: 0px;
+    font-weight: 700;
+
+}
+.hometestimonial-prof{
+    color: #031B4E;
+    margin-top: -8px;
+    font-family: "Syne", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1270px) {
+    .hometestimonials-main{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: #FFFFF5;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .hometestimonials-head{
+        align-items: center;
+        color: #031B4E;
+        padding-inline-end: 10%;
+        padding-inline-start: 10%;
+        font-family: var(--heading-font);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-bottom: 60px;text-align: center;
+    }
+    .hometestimonials-container{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hometestimonials-box{
+        width: 49%;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 30px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 1000px){
+    .hometestimonials-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #FFFFF5;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .hometestimonials-head{
+        align-items: center;
+        color: #031B4E;
+        padding-inline-end: 0%;
+        padding-inline-start: 0%;
+        font-family: var(--heading-font);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-bottom: 60px;text-align: center;
+    }
+    .hometestimonials-container{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hometestimonials-box{
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 30px;
+    }
+}
+
+@media screen  and (min-width: 500px) and (max-width: 850px){
+    .hometestimonials-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #FFFFF5;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .hometestimonials-head{
+        align-items: center;
+        color: #031B4E;
+        padding-inline-end: 0%;
+        padding-inline-start: 0%;
+        font-family: var(--heading-font);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .hometestimonials-container{
+        display: block;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
+    }
+    .hometestimonials-box{
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom:30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .hometestimonials-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #FFFFF5;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .hometestimonials-head{
+        align-items: center;
+        color: #031B4E;
+        padding-inline-end: 0%;
+        padding-inline-start: 0%;
+        font-family: var(--heading-font);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .hometestimonials-container{
+        display: block;
+        width: 100%;
+        gap: 20px;
+        padding-top: 20px;
+    }
+    .hometestimonials-box{
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom:30px;
+    }
+    .hometestimonial-title {
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 42px;
+        margin: 030px 0px 015px 0px;
+    }
+}
+

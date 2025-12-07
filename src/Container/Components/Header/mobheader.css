@@ -1,0 +1,341 @@
+.main-mobheader {
+    width: 100%;
+    background: #031B4E;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.226);
+    padding: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .main-mobheader {
+        display: block;
+    }
+}
+
+.mobheader-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mob-logo img {
+    max-height: 50px;
+}
+
+.mob-right-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.mob-hamburger img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.innerheader-btn .header-btn {
+    background-color: var(--accent-color);
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #031B4E;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #031B4E;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 0px 0px #FDFDE1;
+    border-radius: 50px;
+    padding: 11px 29px;
+}
+
+.innerheader-btn .header-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 #000;
+}
+
+@media screen and (max-width: 750px) {
+    .innerheader-btn {
+        display: none;
+    }
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Sidebar */
+.mobsidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 90% !important;
+    max-width: 400px;
+    height: 100vh;
+    background-color: #031B4E;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.mobsidebar.active {
+    right: 0;
+}
+
+.mobheader2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    background: #031B4E;
+    z-index: 10;
+}
+
+.mobheader2 .mob-log img {
+    max-height: 40px;
+}
+
+.mob-sidebar {
+    padding-bottom: 30px;
+}
+
+/* Menu Items */
+.mob-h-menu-items {
+    padding-top: 10px;
+}
+
+.mob-menu-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mob-m-items {
+    color: white;
+    font-family: var(--heading-font);
+    font-size: 18px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mob-m-items:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mob-m-items.has-submenu {
+    padding: 0;
+}
+
+/* Menu Item Header */
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+
+.menu-item-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-arrow {
+    font-size: 12px;
+    color: #F6871F;
+    transition: transform 0.3s ease;
+}
+
+/* Submenu Styles */
+.mob-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mob-submenu.expanded {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Level 1 Submenu */
+.mob-submenu.level-1 {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.mob-submenu.level-1 > .mob-submenu-item {
+    padding-left: 30px;
+}
+
+/* Level 2 Submenu */
+.mob-submenu.level-2 {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mob-submenu.level-2 > .mob-submenu-item {
+    padding-left: 45px;
+}
+
+/* Level 3 Submenu */
+.mob-submenu.level-3 {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.mob-submenu.level-3 > .mob-submenu-item {
+    padding-left: 60px;
+}
+
+/* Level 4 Submenu */
+.mob-submenu.level-4 {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.mob-submenu.level-4 > .mob-submenu-item {
+    padding-left: 75px;
+}
+
+/* Submenu Items */
+.mob-submenu-item {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mob-submenu-item:hover {
+    background: rgba(246, 135, 31, 0.1);
+    color: #F6871F;
+}
+
+.mob-submenu-item:last-child {
+    border-bottom: none;
+}
+
+.mob-submenu-item.has-submenu {
+    padding: 0;
+}
+
+/* Submenu Header */
+.submenu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+.submenu-header:hover {
+    background: rgba(246, 135, 31, 0.1);
+}
+
+.submenu-header span {
+    flex: 1;
+}
+
+.submenu-header .menu-arrow {
+    padding: 5px 10px;
+    margin-right: -10px;
+}
+
+/* Adjust padding for nested submenu headers */
+.level-1 > .mob-submenu-item > .submenu-header {
+    padding-left: 30px;
+}
+
+.level-2 > .mob-submenu-item > .submenu-header {
+    padding-left: 45px;
+}
+
+.level-3 > .mob-submenu-item > .submenu-header {
+    padding-left: 60px;
+}
+
+/* Social Icons Section */
+.mob-s-icons {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mob-follow {
+    color: white;
+    padding: 0 20px 10px;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    text-align: left;
+}
+
+.m-social-icons {
+    display: flex;
+    padding: 15px 20px;
+    gap: 12px;
+}
+
+.s-icon1,
+.s-icon2 {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color) !important;
+    border-radius: 50%;
+    color: #031B4E;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.s-icon1:hover,
+.s-icon2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(246, 135, 31, 0.3);
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Scrollbar Styling */
+.mobsidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mobsidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobsidebar::-webkit-scrollbar-thumb {
+    background: #F6871F;
+    border-radius: 5px;
+}
+
+/* Active menu indicator */
+.mob-submenu-item.active,
+.mob-m-items.active {
+    color: #F6871F;
+    background: rgba(246, 135, 31, 0.1);
+    border-left: 3px solid #F6871F;
+}

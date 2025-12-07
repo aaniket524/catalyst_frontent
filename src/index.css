@@ -1,0 +1,19 @@
+:root {
+    --heading-color: #031B4E;
+    --text-color: #0C0C0C;
+    --accent-color: #F6871F;
+    --accent-color-2: #F6871F;
+    --white-color: #FDFDE1;
+    --heading-font: 'Syne', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --white-bg: #fff;
+    --black-bg: #031B4E;
+    scroll-behavior: auto;
+    --content-width: min(100%, var(--container-max-width, 1140px));
+    --container-max-width: 1320px;
+}
+
+body{
+  padding: 0px !important;
+  margin: 0px !important;
+}

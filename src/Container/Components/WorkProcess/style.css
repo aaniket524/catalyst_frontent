@@ -1,0 +1,441 @@
+.workprocess-main{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #FFFFF5;
+    border-bottom: .8px solid rgba(14, 13, 13, 0.192);
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+}
+.main-workprocess{
+    background: #FFFFF5;
+
+}
+
+.workprocess-container{
+    display: flex;
+    width: 100%;
+}
+.workprocess-offset{
+    width: 5%;
+}
+.workprocess-1{
+    width: 55%;
+}
+.workprocess-2{
+    width: 40%;
+}
+.workprocess-title{
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.07em;
+    letter-spacing: -0.7px;
+}
+.workprocess-desc-m{
+    margin-top: 24px;
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.workprocess-box{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+}
+.workprocess-box.active{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 0px 0px black;
+}
+.workprocess-box.active{
+    background-color: #F6871F;
+    box-shadow: 4px 4px 0px 0px #031B4E;}
+.wk-box{
+    display: flex;
+    justify-content: space-between;
+}
+.workprocess-cicons-active{
+    display: block;
+}
+.workprocess-cicons-inactive{
+    display: none;
+}
+.workprocess-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease, padding 0.4s ease;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition-property: max-height, padding, opacity, transform;
+}
+
+.workprocess-desc.active {
+    max-height: 500px; /* You can adjust or use auto with JS if dynamic */
+    padding: 15px 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.workprocess-h{
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+}
+.workprocess-desc{
+    font-family: "Inter", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #0C0C0C;
+}
+
+@media screen and (max-width: 1270px) {
+    .workprocess-main{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #FFFFF5;
+        border-bottom: .8px solid rgba(14, 13, 13, 0.192);
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center
+    }
+
+    .workprocess-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+    }
+
+
+  
+    
+}
+@media screen and (min-width: 800px) and (max-width: 1000px){
+    .workprocess-main{
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #FFFFF5;
+        border-bottom: .8px solid rgba(14, 13, 13, 0.192);
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center
+    }
+    .workprocess-container{
+        display: block;
+        width: 100%;
+    }
+    .workprocess-offset{
+        display: none;
+    }
+    .workprocess-1{
+        width: 100%;
+    }
+    .workprocess-2{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .workprocess-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-inline-start: 10%;
+        padding-inline-end: 10%;
+        text-align: center;
+    }
+    .workprocess-desc-m{
+        margin-top: 24px;
+        padding-top: 0px;
+        padding-inline-start: 10%;
+        padding-inline-end: 10%;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+    }
+    .workprocess-box{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: 30px;
+    }
+    .workprocess-box.active{
+        background-color: #F6871F;
+        box-shadow: 4px 4px 0px 0px #031B4E;}
+    .wk-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .workprocess-cicons-actiive{
+        display: block;
+    }
+    .workprocess-cicons-inactive{
+        display: none;
+    }
+    .workprocess-desc {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease, padding 0.4s ease;
+        padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition-property: max-height, padding, opacity, transform;
+    }
+    
+    .workprocess-desc.active {
+        max-height: 500px; /* You can adjust or use auto with JS if dynamic */
+        padding: 15px 20px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .workprocess-h{
+        font-family: "Syne", Sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .workprocess-desc{
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #0C0C0C;
+    }
+    
+}
+@media screen  and (min-width: 500px) and (max-width: 800px){
+    .workprocess-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: #FFFFF5;
+        border-bottom: .8px solid rgba(14, 13, 13, 0.192);
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center
+    }
+    .workprocess-container{
+        display: block;
+        width: 100%;
+    }
+    .workprocess-offset{
+        display: none;
+    }
+    .workprocess-1{
+        width: 100%;
+    }
+    .workprocess-2{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .workprocess-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-inline-start: 0%;
+        padding-inline-end: 0%;
+        text-align: center;
+    }
+    .workprocess-desc-m{
+        margin-top: 24px;
+        padding-top: 0px;
+        padding-inline-start: 0%;
+        padding-inline-end: 0%;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+    }
+    .workprocess-box{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: 30px;
+    }
+    .workprocess-box.active{
+        background-color: #F6871F;
+        box-shadow: 4px 4px 0px 0px #031B4E;}
+    .wk-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .workprocess-cicons-actiive{
+        display: block;
+    }
+    .workprocess-cicons-inactive{
+        display: none;
+    }
+    .workprocess-desc {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease, padding 0.4s ease;
+        padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition-property: max-height, padding, opacity, transform;
+    }
+    
+    .workprocess-desc.active {
+        max-height: 500px; /* You can adjust or use auto with JS if dynamic */
+        padding: 15px 20px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .workprocess-h{
+        font-family: "Syne", Sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .workprocess-desc{
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #0C0C0C;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .workprocess-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background: #FFFFF5;
+        border-bottom: .8px solid rgba(14, 13, 13, 0.192);
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center
+    }
+    .workprocess-container{
+        display: block;
+        width: 100%;
+    }
+    .workprocess-offset{
+        display: none;
+    }
+    .workprocess-1{
+        width: 100%;
+    }
+    .workprocess-2{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .workprocess-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        padding-inline-start: 0%;
+        padding-inline-end: 0%;
+        text-align: center;
+    }
+    .workprocess-desc-m{
+        margin-top: 24px;
+        padding-top: 0px;
+        padding-inline-start: 0%;
+        padding-inline-end: 0%;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+    }
+    .workprocess-box{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: 30px;
+    }
+    .workprocess-box.active{
+        background-color: #F6871F;
+        box-shadow: 4px 4px 0px 0px #031B4E;}
+    .wk-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .workprocess-cicons-actiive{
+        display: block;
+    }
+    .workprocess-cicons-inactive{
+        display: none;
+    }
+    .workprocess-desc {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease, padding 0.4s ease;
+        padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition-property: max-height, padding, opacity, transform;
+    }
+    
+    .workprocess-desc.active {
+        max-height: 500px; /* You can adjust or use auto with JS if dynamic */
+        padding: 15px 20px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .workprocess-h{
+        font-family: "Syne", Sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .workprocess-desc{
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #0C0C0C;
+    }
+
+}

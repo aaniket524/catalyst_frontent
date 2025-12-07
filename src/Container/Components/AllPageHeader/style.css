@@ -1,0 +1,60 @@
+.allpageheader{
+
+}
+.aboutpage-main-part{
+    background-color: #031B4E;
+    padding-top:130px;
+    padding-bottom: 130px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  
+ }
+
+
+ .aph-main{
+    padding-top: 10px;
+
+ }
+
+.aph-head{
+        font-family: var(--heading-font);
+        color: #FDFDE1;
+        font-family: "Syne", Sans-serif;
+        font-size: 104px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: -1px;
+}
+.aph-breadcrumb{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-family: var(--body-font);
+    text-transform: capitalize;
+}
+
+@media (max-width:900px) {
+    .aboutpage-main-part{
+        background-color: #031B4E;
+        padding-top:100px;
+        padding-bottom: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+     }
+     .aph-head{
+        font-family: var(--heading-font);
+        text-transform: capitalize;
+        font-size: 48px;
+        line-height: 1.2;
+        font-weight:bold;
+        text-align: center;
+        color: white;
+        letter-spacing: 0px;
+    }
+ }

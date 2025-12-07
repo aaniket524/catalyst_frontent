@@ -1,0 +1,463 @@
+.about-page-main{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+    padding-bottom: 120px;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center  
+}
+.about-page-container{
+    background-color: #FFFFF5;
+    padding-inline-start: 19%;
+    padding-inline-end: 19%;
+}
+.about-page-contain1{
+    padding-top: 80px;
+    display: flex;
+    gap: 20px;
+
+    width: 100%;
+}
+.about-page-container1{
+    width: 70%;
+  
+}
+.aboutpage-img-1{
+    width: 418px;
+    height: 415px !important;
+}
+
+.about-page-container2{
+    width: 30%;
+}
+.about-page-contain2{
+    display: flex;
+    padding-top:40px;
+    gap: 20px;
+    width: 100%;
+}
+.about-page-container-1{
+    width: 70%;
+}
+.about-page-container-2{
+    width: 30%;
+}
+.about-page-title{
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.07em;
+    letter-spacing: -0.7px;
+    text-align: center;
+}
+.about-page-content{
+    margin: 024px 0px 0px 0px;
+    text-align: center;
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.apg{
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+}
+.about-page-box{
+    display: flex;
+    width: 100%;
+    padding-top: 40px;
+}
+.about-page-grid1{
+    width: 50%;
+}
+.about-page-grid2{
+    width: 50%;
+}
+.apg-c1{
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.apg-c2{
+    color: #0C0C0C;
+    padding-top: 20px;
+    font-family: "Inter", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
+@media screen and (max-width: 1270px) {
+    .about-page-main{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 0px;
+        padding-bottom: 120px;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .about-page-container{
+        background-color: #FFFFF5;
+        padding-inline-start: 10%;
+        padding-inline-end: 10%;
+    }
+    .aboutpage-img-1{
+        width: 100%;
+        height: 100% !important;
+    }
+ 
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-box{
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+        gap: 20px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 1000px){
+    .about-page-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 120px;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .about-page-container{
+        background-color: #FFFFF5;
+        padding-inline-start: 10%;
+        padding-inline-end: 10%;
+    }
+    .aboutpage-img-1{
+        width: 100%;
+        height: 100% !important;
+    }
+ 
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-contain1{
+        padding-top: 80px;
+        display: flex;
+        gap: 20px;
+    
+        width: 100%;
+    }
+    .about-page-container1{
+        width: 70%;
+    }    
+    .about-page-container2{
+        width: 30%;
+    }
+    .about-page-contain2{
+        display: flex;
+        padding-top:40px;
+        gap: 20px;
+        width: 100%;
+    }
+    .about-page-container-1{
+        width: 70%;
+    }
+    .about-page-container-2{
+        width: 30%;
+    }
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-content{
+        margin: 024px 0px 0px 0px;
+        text-align: center;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .about-page-box{
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+        gap: 10px;
+    }
+    .about-page-grid1{
+        width: 50%;
+    }
+    .about-page-grid2{
+        width: 50%;
+    }
+    .apg-c1{
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg-c2{
+        color: #0C0C0C;
+        padding-top: 20px;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    
+}
+@media screen  and (min-width: 500px) and (max-width: 850px){
+    .about-page-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 100px;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .about-page-container{
+        background-color: #FFFFF5;
+        padding-inline-start: 10%;
+        padding-inline-end: 10%;
+    }
+    .aboutpage-img-1{
+        width: 100%;
+        height: 100% !important;
+    }
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-contain1{
+        padding-top: 40px;
+        display: block;
+        gap: 20px;
+    
+        width: 100%;
+    }
+    .about-page-container1{
+        width: 100%;
+    }    
+    .about-page-container2{
+        padding-top: 40px;
+        width: 100%;
+    }
+    .about-page-contain2{
+        display: block;
+        padding-top:40px;
+        gap: 20px;
+        width: 100%;
+    }
+    .about-page-container-1{
+        width: 100%;
+        padding-top: 40px;
+
+    }
+    .about-page-container-2{
+        width: 100%;
+    }
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-content{
+        margin: 024px 0px 0px 0px;
+        text-align: center;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .about-page-box{
+        display: block;
+        width: 100%;
+        padding-top: 40px;
+        gap: 10px;
+    }
+    .about-page-grid1{
+        width: 100%;
+    }
+    .about-page-grid2{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .apg-c1{
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg-c2{
+        color: #0C0C0C;
+        padding-top: 10px;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-page-main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 80px;
+        max-width: 1420px;
+        overflow: hidden;
+        justify-self: center  
+    }
+    .about-page-container{
+        background-color: #FFFFF5;
+        padding-inline-start: 0%;
+        padding-inline-end: 0%;
+    }
+    .aboutpage-img-1{
+        width: 100%;
+        height: 100% !important;
+    }
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-contain1{
+        padding-top: 40px;
+        display: block;
+        gap: 20px;
+    
+        width: 100%;
+    }
+    .about-page-container1{
+        width: 100%;
+    }    
+    .about-page-container2{
+        padding-top: 40px;
+        width: 100%;
+    }
+    .about-page-contain2{
+        display: block;
+        padding-top:40px;
+        gap: 20px;
+        width: 100%;
+    }
+    .about-page-container-1{
+        width: 100%;
+        padding-top: 40px;
+
+    }
+    .about-page-container-2{
+        width: 100%;
+    }
+    .about-page-title{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.07em;
+        letter-spacing: -0.7px;
+        text-align: center;
+    }
+    .about-page-content{
+        margin: 024px 0px 0px 0px;
+        text-align: center;
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg{
+        color: #031B4E;
+        font-family: "Syne", Sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .about-page-box{
+        display: block;
+        width: 100%;
+        padding-top: 40px;
+        gap: 10px;
+    }
+    .about-page-grid1{
+        width: 100%;
+    }
+    .about-page-grid2{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .apg-c1{
+        color: #0C0C0C;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .apg-c2{
+        color: #0C0C0C;
+        padding-top: 10px;
+        font-family: "Inter", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
