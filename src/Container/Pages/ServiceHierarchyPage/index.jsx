@@ -89,7 +89,7 @@ function ServiceHierarchyPage() {
     useEffect(() => {
         const fetchService = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/backend/multiservice/');
+                const response = await axios.get('http://api.catalystoutsource.com/backend/multiservice/');
                 const allServices = response.data.map(s => addFullPath(s));
 
                 // Convert current URL path into array of slugs

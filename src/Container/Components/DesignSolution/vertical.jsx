@@ -16,7 +16,7 @@ function Vertical({ limit = null }) {
 
   const fetchData = async () => {
     const response = await axios.get(
-      "http://127.0.0.1:8000/backend/multiservice/"
+      "http://api.catalystoutsource.com/backend/multiservice/"
     );
     setService(response.data);
   };

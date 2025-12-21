@@ -9,7 +9,7 @@ function SingleService(params) {
     const {slug} = useParams()
     const [singleserv, setSingleServ] = useState()
     const fetchData= async()=>{    
-        const response = await axios.get(`http://127.0.0.1:8000/backend/single-services/${slug}/`)
+        const response = await axios.get(`http://api.catalystoutsource.com/backend/single-services/${slug}/`)
         // const match = response.singleserv.find(item => item.slug === slug);
         // setSingleServ(match);
         setSingleServ(response.data);

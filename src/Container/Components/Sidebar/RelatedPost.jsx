@@ -7,7 +7,7 @@ import axios from "axios";
 function RelatedPost(params) {
     const [rblogs, setRblogs] = useState([])
     const fetchData = async()=>{
-        const response = await axios.get('http://127.0.0.1:8000/backend/blogs/')
+        const response = await axios.get('http://api.catalystoutsource.com/backend/blogs/')
         setRblogs(response.data)
         console.log(response.data)
     }
@@ -27,7 +27,7 @@ function RelatedPost(params) {
                     return(
                         <div className="recent-post-container">
                         <div className="recent-post-grid-img">
-                            <img src={`http://127.0.0.1:8000/${data.thumbnail}`}
+                            <img src={`http://api.catalystoutsource.com/${data.thumbnail}`}
                             className="rpg-img img-fluid"/>
                         </div>
                         <div className="recent-post-grid-content">

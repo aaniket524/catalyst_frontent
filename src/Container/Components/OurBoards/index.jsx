@@ -9,7 +9,7 @@ import axios from 'axios';
 function OurBoards(params) {
   const [team, setTeam] = useState([])
   const fetchData=async()=>{
-    const response = await axios.get('http://127.0.0.1:8000/backend/boardmember/')
+    const response = await axios.get('http://api.catalystoutsource.com/backend/boardmember/')
     setTeam(response.data)
     console.log(response.data)
     console.log(team)

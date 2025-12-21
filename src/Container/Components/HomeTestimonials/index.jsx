@@ -4,7 +4,7 @@ import axios from "axios";
 function HomeTestimonials(){
     const [ testimonials, setTestimonials] = useState([])
     const fetchData=async()=>{
-        const response = await axios.get('http://127.0.0.1:8000/backend/testimonials')
+        const response = await axios.get('http://api.catalystoutsource.com/backend/testimonials')
         setTestimonials(response.data)
     }
     useEffect(()=>{

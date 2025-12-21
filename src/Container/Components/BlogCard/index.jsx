@@ -17,7 +17,7 @@ function BlogCard( { categorySlug = null, tagsSlug = null } ){
     };
  
     const fetchData = async()=>{
-        const response = await axios.get('http://127.0.0.1:8000/backend/blogs/')
+        const response = await axios.get('http://api.catalystoutsource.com/backend/blogs/')
       
         setBlogs(response.data)
         console.log(response.data)
@@ -53,7 +53,7 @@ function BlogCard( { categorySlug = null, tagsSlug = null } ){
             return(
                 <div className="blog-card block" key={data.id} >
                 <div className="blog-card-image">
-                    <img src={`http://127.0.0.1:8000/${data.thumbnail}`}
+                    <img src={`http://api.catalystoutsource.com/${data.thumbnail}`}
                     className="blog-card-img img-fluid"/>
                 </div>
                 <div className="blog-card-content">

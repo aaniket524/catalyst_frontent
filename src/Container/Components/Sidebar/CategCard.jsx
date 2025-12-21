@@ -8,7 +8,7 @@ function CategCard(params) {
     const [categ, setCateg] = useState([])
     const fetchData = async()=>{
         try {
-            const response = await axios.get('http://127.0.0.1:8000/backend/blogs/');
+            const response = await axios.get('http://api.catalystoutsource.com/backend/blogs/');
             setCateg(response.data);
             console.log(response.data);
           } catch (error) {
