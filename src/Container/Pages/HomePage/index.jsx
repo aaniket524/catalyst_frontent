@@ -8,12 +8,15 @@ import WorkProcess from "../../Components/WorkProcess";
 import HomeTestimonials from "../../Components/HomeTestimonials";
 import HomeMarquee from "../../Components/HomeMarquee";
 import HomeTeam from "../../Components/HomeTeam";
+import Slider from "../../Components/Slider";
 
 function HomePage(params) {
     return(
         <>
-         <Hero/>
+        <Slider/>
+         
          <DesignSolution  limit={4} />
+         <Hero/> 
          <StandOutSection/>
          <ProjectRange/>
          <WorkProcess/> 

@@ -3,7 +3,8 @@ import './style.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowRight, faArrowUp, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Navigate, useNavigate } from "react-router-dom";
-import catamain from '../../../assests/catamain.png'
+import catamain from '../../../assests/catamain.png';
+import logoanimate from '../../../assests/logoani.mp4';
 
 
 function Hero(params) {
@@ -19,10 +20,10 @@ function Hero(params) {
             <div className="hero-section  container-fluid">
                 <div className="hero-content ">
                     <h1 className="hero-heading">
-                    Smart Outsourcing for Smarter Growth
+                    Empowering Growth Through Smart Outsourcing
                     </h1>
                     <p className="hero-desc">
-                    We specialize in innovative outsourcing, financial management, and strategic consulting to help businesses elevate performance, streamline operations, and achieve sustainable growth in today’s fast-moving world.
+                        At Catalyst Outsource, we help businesses scale faster, smarter, and more efficiently by delivering high-impact outsourcing solutions tailored to your unique needs. Whether you're a startup looking to streamline operations or an enterprise aiming to optimize costs and performance, we bring the right people, processes, and platforms to catalyze your success.
                     </p>
                     <div className="inner-hero-section">
                         <div className="inner-hero-section-image">
@@ -47,8 +48,16 @@ function Hero(params) {
                     
                 </div>
                 <div className="hero-image ">
-                    <img src={catamain}
-                    className="hero-top-image img-fluid"/>
+                    {/* <img src={catamain}
+                    className="hero-top-image img-fluid"/> */}
+<video
+  className="hero-top-image"
+  src={logoanimate}
+  autoPlay
+  muted
+  playsInline
+  loop
+></video>
                 </div>
             </div>
         </div>

@@ -17,6 +17,8 @@ import Tag from "./Pages/BlogPage/Tag";
 import ServiceType from "./Pages/ServiceType";
 import VerticalLine from "./Pages/ServiceType/verticalline";
 import ServiceHierarchyPage from "./Pages/ServiceHierarchyPage";
+import OurBoardMemberPage from "./Pages/OurBoardMember";
+import OurLeadership from "./Pages/OurLeadership";
 
 function Container(params) {
     return(
@@ -25,6 +27,8 @@ function Container(params) {
       <Route path="/" element={<HomePage />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/about-us" element={<AboutPage />} />
+      <Route path="/our-board-member" element={<OurBoardMemberPage />} />
+      <Route path="/our-leadership" element={<OurLeadership />} />
       <Route path="/contact-us" element={<ContactPage />} />
       <Route path="/our-services" element={<ServicePage />} />
       <Route path="/our-services/serviceline" element={<ServiceType />} />

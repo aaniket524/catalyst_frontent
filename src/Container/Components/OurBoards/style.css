@@ -1,0 +1,396 @@
+.ourboards-main{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+}
+
+.main-ourboards{
+  background-color: #FFFFF5;
+
+}
+.ourboards-head{
+     color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.07em;
+    letter-spacing: -0.7px;
+    text-align: center;
+    padding-inline-start: 19%;
+    padding-inline-end: 19%;
+}
+/* .ourboards-box{
+    padding-top: 80px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-wrap: wrap !important; */
+
+
+    .ourboards-box{
+      overflow: hidden;
+        padding-top: 60px;
+        display: flex;
+        width: 100%;
+        gap: 0px !important;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap !important;
+        
+        
+    }
+    
+    .ourboards-img-wrapper {
+      position:relative;
+
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 5px solid black;
+ 
+      border-radius: 20px;
+    }
+    .ourboards-card{
+        width: 25%;
+        margin-bottom:40px
+    }
+
+/* .ourboards-card{
+    width: 25%;
+
+} */
+.ourboards-img{
+    /* border:4px solid black; */
+    border-radius: 20px;
+        object-fit: none;
+    /* width: 296px;
+    height: 300px; */
+    /* transition: all 0.5s;
+    transform: scale(1); */
+}
+
+.ourboards-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ourboards-title{
+    
+    font-family: "Syne", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0px 10px 0px;
+    color: #031B4E;
+    text-align: center;
+}
+.ourboards-prof{
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 21px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+.t-icons{
+    display: none;
+    position: relative;
+}
+
+.ourboards-img-wrapper:hover .t-icons {
+    display: block;
+  }
+.ht-icon{
+    border: 2px solid white;
+border-radius: 50%;
+padding: 10px;
+color: white;
+background: #031B4E;
+}
+.ht-icon:hover{
+    transition: all .3s ease;
+    border: 2px solid black;
+border-radius: 50%;
+padding: 10px;
+color: black;
+background: var(--accent-color);
+}
+/* 
+.ourboards-img-wrapper {
+    position: relative;
+    width: 306px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+  } */
+  
+  .ourboards-img {
+    width: 100%;
+    height: 100%;
+ 
+    transition: all 0.3s;
+    transform: scale(1);  }
+  
+  .ourboards-card:hover .ourboards-img {
+    /* filter: brightness(60%); */
+    transform: translate3d(0, 0, 0) scale(1.1);
+}
+  
+  .ourboards-icons {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .ourboards-img-wrapper:hover .ourboards-icons {
+    opacity: 1;
+  }
+  
+  .t-icons .ht-icon {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    background: #031B4E;
+    /* transition: all 0.3s ease; */
+  }
+  
+  .t-icons .ht-icon:hover {
+    background: var(--accent-color);
+    color: black;
+    border: 2px solid black;
+  }
+
+@media screen and (max-width:1270) {
+  .ourboards-main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #FFFFF5;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+    
+}
+
+.ourboards-head{    
+    font-size: 48px;
+    padding-inline-start: 10%;
+    padding-inline-end: 10%;
+}
+.ourboards-box{
+  overflow: hidden;
+    padding-top: 60px;
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    flex-wrap: wrap !important;
+    
+    
+}
+
+.ourboards-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+.ourboards-card{
+    width: 20%;
+    margin-bottom:40px
+}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+
+.ourboards-main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #FFFFF5;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+}
+
+.ourboards-head{    
+    font-size: 48px;
+    padding-inline-start: 10%;
+    padding-inline-end: 10%;
+}
+.ourboards-title{
+    
+  font-family: "Syne", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0px 0px 0px;
+  color: #031B4E;
+  text-align: center;
+}
+.ourboards-box{
+  overflow: hidden;
+    padding-top: 60px;
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap !important;
+    
+    
+}
+
+.ourboards-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+.ourboards-card{
+    width: 45%;
+    margin-bottom:40px
+}
+}
+@media screen  and (min-width: 550px) and (max-width: 800px){
+  .ourboards-main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #FFFFF5;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+}
+
+.ourboards-head{    
+    font-size: 36px;
+    padding-inline-start: 8%;
+    padding-inline-end: 8%;
+}
+.ourboards-box{
+  overflow: hidden;
+    padding-top: 60px;
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap !important;
+    
+    
+}
+
+.ourboards-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+.ourboards-title{
+    
+  font-family: "Syne", Sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0px 0px 0px;
+  color: #031B4E;
+  text-align: center;
+}
+.ourboards-prof{
+  color: #0C0C0C;
+  font-family: "Inter", Sans-serif;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+}
+.ourboards-card{
+    width: 40%;
+    margin-bottom:40px
+}
+}
+@media screen and (max-width: 550px) {
+  .ourboards-main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #FFFFF5;
+    max-width: 1420px;
+    overflow: hidden;
+    justify-self: center
+}
+
+.ourboards-head{    
+    font-size: 36px;
+    padding-inline-start: 8%;
+    padding-inline-end: 8%;
+}
+.ourboards-box{
+  overflow: hidden;
+    padding-top: 60px;
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap !important;
+    
+    
+}
+
+.ourboards-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+.ourboards-title{
+    
+  font-family: "Syne", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px 0px 0px 0px;
+  color: #031B4E;
+  text-align: center;
+}
+.ourboards-prof{
+  color: #0C0C0C;
+  font-family: "Inter", Sans-serif;
+  font-size: 21px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+}
+.ourboards-card{
+    width: 100%;
+    margin-bottom:40px
+}
+}

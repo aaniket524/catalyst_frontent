@@ -1,7 +1,6 @@
 import React from "react";
 import './style.css';
 import mainlogo from '../../../assests/updatedlogo.png';
-
 function Copyright(params) {
    return(
     <>

@@ -461,3 +461,46 @@
         line-height: 30px;
     }
 }
+/* WHY CHOOSE US */
+.why-choose-us {
+    padding-top: 100px;
+    width: 100%;
+}
+
+.why-choose-header {
+    text-align: center;
+    padding-inline-start: 15%;
+    padding-inline-end: 15%;
+}
+
+.why-title {
+    color: #031B4E;
+    font-family: "Syne", Sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.07em;
+    letter-spacing: -0.7px;
+    text-align: center;
+}
+
+.why-subtitle {
+    margin-top: 20px;
+    color: #0C0C0C;
+    font-family: "Inter", Sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+}
+
+.why-card {
+    background-color: #FFFFF5;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+

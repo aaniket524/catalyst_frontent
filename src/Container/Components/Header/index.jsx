@@ -1,95 +1,99 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import MobHeader from './MobHeader';
 import mainlogo from '../../../assests/updatedlogo.png';
 
 function Header() {
     const navigate = useNavigate();
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isAboutOpen, setIsAboutOpen] = useState(false);
     const [selectedLevel1, setSelectedLevel1] = useState('Industries');
-    const [selectedLevel2, setSelectedLevel2] = useState(null);
-    const [selectedLevel3, setSelectedLevel3] = useState(null);
-    const menuRef = useRef(null);
+    
+    const headerRef = useRef(null);
 
-    // Menu Data Structure with Links
+    // About Us Menu Data
+    const aboutMenuData = [
+        { name: 'About Company', link: '/about-us' },
+        { name: 'Our Board Members', link: '/our-board-member' },
+        { name: 'Our Leadership', link: '/our-leadership' }
+    ];
+
+    // Simplified Services Menu Data - Only 2 levels
     const menuData = {
         Industries: {
-            link: 'our-services/industries',
+            link: '/our-services/industries',
             items: [
-                { name: 'Banking and Capital Markets', link: 'our-services/industries/banking-capital-markets' },
-                { name: 'Insurance', link: 'our-services/industries/insurance' },
-                { name: 'Consumer Goods and Retail', link: 'our-services/industries/consumer-goods-retail' },
-                { name: 'Life Sciences & Healthcare', link: 'our-services/industries/life-sciences-healthcare' },
-                { name: 'Manufacturing', link: 'our-services/industries/manufacturing' },
-                { name: 'High Tech, Media, Software', link: 'our-services/industries/high-tech-media-software' }
-            ],
-            children: {}
+                { name: 'Consumer Goods and Retail', link: '/our-services/industries/consumer-goods-retail' },
+                { name: 'Manufacturing', link: '/our-services/industries/manufacturing' },
+                { name: 'Life Sciences & Healthcare', link: '/our-services/industries/life-sciences-healthcare' },
+                { name: 'Private Equity', link: '/our-services/industries/private-equity' },
+                { name: 'Insurance', link: '/our-services/industries/insurance' },
+                { name: 'Banking', link: '/our-services/industries/banking' },
+                { name: 'High Tech, Media, Software', link: '/our-services/industries/high-tech-media-software' }
+            ]
         },
         Capabilities: {
-            link: 'our-services/capabilities',
+            link: '/our-services/capabilities',
             items: [
-                { name: 'Business Services', link: 'our-services/capabilities/business-services' },
-                { name: 'Digital & IT', link: 'our-services/capabilities/digital-and-it' }
-            ],
-            children: {
-                'Business Services': {
-                    link: 'our-services/capabilities/business-services',
-                    items: [
-                        { name: 'Accounts Payable', link: 'our-services/capabilities/business-services/accounts-payable' },
-                        { name: 'Accounts Receivable', link: 'our-services/capabilities/business-services/accounts-receivable' },
-                        { name: 'Record to Report', link: 'our-services/capabilities/business-services/record-to-report' }
-                    ],
-                    children: {
-                        'Accounts Payable': [
-                            { name: 'Invoice Validation', link: 'our-services/capabilities/business-services/accounts-payable/invoice-validation' }
-                        ],
-                        'Accounts Receivable': [],
-                        'Record to Report': []
-                    }
-                },
-                'Digital & IT': {
-                    link: '/capabilities/digital-and-it',
-                    items: [
-                        { name: 'Process Redesigning', link: 'our-services/capabilities/digital-and-it/process-redesigning' },
-                        { name: 'Software Development', link: 'our-services/capabilities/digital-and-it/software-development' },
-                        { name: 'Process Automation', link: 'our-services/capabilities/digital-and-it/process-automation' },
-                        { name: 'Digital Dashboard', link: 'our-services/capabilities/digital-and-it/digital-dashboard' }
-                    ],
-                    children: {}
-                }
-            }
+                { name: 'Business Services', link: '/our-services/capabilities/business-services' },
+                { name: 'Digital & IT', link: '/our-services/capabilities/digital-and-it' }
+            ]
         }
     };
 
-    // Reset selections when level 1 changes
+    // Auto close all dropdowns when URL changes
     useEffect(() => {
-        if (selectedLevel1 === 'Industries') {
-            setSelectedLevel2(menuData.Industries.items[0]?.name);
-            setSelectedLevel3(null);
-        } else if (selectedLevel1 === 'Capabilities') {
-            setSelectedLevel2(menuData.Capabilities.items[0]?.name);
-            const firstChild = menuData.Capabilities.children['Business Services'];
-            if (firstChild && firstChild.items.length > 0) {
-                setSelectedLevel3(firstChild.items[0]?.name);
-            }
-        }
-    }, [selectedLevel1]);
+        setIsMenuOpen(false);
+        setIsAboutOpen(false);
+    }, [location.pathname]);
 
     // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (headerRef.current && !headerRef.current.contains(event.target)) {
                 setIsMenuOpen(false);
+                setIsAboutOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    // Close on Escape key
+    useEffect(() => {
+        const handleEscKey = (event) => {
+            if (event.key === 'Escape') {
+                setIsMenuOpen(false);
+                setIsAboutOpen(false);
+            }
+        };
+        document.addEventListener('keydown', handleEscKey);
+        return () => document.removeEventListener('keydown', handleEscKey);
+    }, []);
+
+    // Handle Services Click
     const handleServiceClick = (e) => {
         e.preventDefault();
+        e.stopPropagation();
+        setIsAboutOpen(false);
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    // Handle About Click
+    const handleAboutClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsMenuOpen(false);
+        setIsAboutOpen(!isAboutOpen);
+    };
+
+    // Handle About Menu Item Click
+    const handleAboutItemClick = (e, link) => {
+        e.stopPropagation();
+        navigate(link);
+        setIsAboutOpen(false);
     };
 
     const HandleRedirect = () => {
@@ -104,71 +108,22 @@ function Header() {
         return [];
     };
 
-    // Get Level 3 items
-    const getLevel3Items = () => {
-        if (selectedLevel1 === 'Capabilities' && selectedLevel2) {
-            const children = menuData.Capabilities.children[selectedLevel2];
-            if (children) {
-                return children.items || [];
-            }
-        }
-        return [];
-    };
-
-    // Get Level 4 items
-    const getLevel4Items = () => {
-        if (selectedLevel1 === 'Capabilities' && selectedLevel2 && selectedLevel3) {
-            const level2Children = menuData.Capabilities.children[selectedLevel2];
-            if (level2Children && level2Children.children && level2Children.children[selectedLevel3]) {
-                return level2Children.children[selectedLevel3] || [];
-            }
-        }
-        return [];
-    };
-
-    // Check if item has children
-    const hasChildren = (level, itemName) => {
-        if (level === 1) {
-            return menuData[itemName]?.items?.length > 0;
-        }
-        if (level === 2 && selectedLevel1 === 'Capabilities') {
-            return menuData.Capabilities.children[itemName]?.items?.length > 0;
-        }
-        if (level === 3 && selectedLevel1 === 'Capabilities' && selectedLevel2) {
-            const level2Children = menuData.Capabilities.children[selectedLevel2];
-            return level2Children?.children?.[itemName]?.length > 0;
-        }
-        return false;
-    };
-
-    // Handle Level 1 Click
-    const handleLevel1Click = (item, link) => {
+    // Handle Level 1 Click (Industries/Capabilities) - Just switch tabs
+    const handleLevel1Click = (e, item) => {
+        e.stopPropagation();
         setSelectedLevel1(item);
-        navigate(link);
     };
 
-    // Handle Level 2 Click
-    const handleLevel2Click = (item, link) => {
-        setSelectedLevel2(item.name);
-        setSelectedLevel3(null);
-        navigate(item.link);
-    };
-
-    // Handle Level 3 Click
-    const handleLevel3Click = (item) => {
-        setSelectedLevel3(item.name);
-        navigate(item.link);
-    };
-
-    // Handle Level 4 Click
-    const handleLevel4Click = (item) => {
+    // Handle Level 2 Click - Navigate and close menu
+    const handleLevel2Click = (e, item) => {
+        e.stopPropagation();
         navigate(item.link);
         setIsMenuOpen(false);
     };
 
     return (
         <>
-            <div className='header-main' ref={menuRef}>
+            <div className='header-main' ref={headerRef}>
                 <div className='header-section'>
                     <div className='headers'>
                         <div className='innerheader-logo'>
@@ -177,14 +132,23 @@ function Header() {
                         <div className='innerheader-items'>
                             <ul className='innerheader-ul'>
                                 <Link to='/home'><li className='innerheader-items'>Home</li></Link>
-                                <Link to='/about-us'><li className='innerheader-items'>About Us</li></Link>
-                                {/* <Link to='/blogs'><li className='innerheader-items'>Blogs</li></Link> */}
+                                
+                                {/* ABOUT US DROPDOWN */}
+                                <li 
+                                    className={`innerheader-items dropdown ${isAboutOpen ? 'active' : ''}`}
+                                    onClick={handleAboutClick}
+                                >
+                                    About Us {isAboutOpen ? '▲' : '▼'}
+                                </li>
+
+                                {/* OUR SERVICES DROPDOWN */}
                                 <li 
                                     className={`innerheader-items dropdown ${isMenuOpen ? 'active' : ''}`}
                                     onClick={handleServiceClick}
                                 >
                                     Our Services {isMenuOpen ? '▲' : '▼'}
                                 </li>
+                                
                                 <Link to='/contact-us'><li className='innerheader-items'>Contact Us</li></Link>
                             </ul>
                         </div>
@@ -194,12 +158,34 @@ function Header() {
                     </div>
                 </div>
 
-                {/* MEGA MENU DROPDOWN */}
+                {/* ABOUT US DROPDOWN MENU */}
+                {isAboutOpen && (
+                    <div className='about-dropdown-wrapper'>
+                        <div className='about-dropdown-container'>
+                            <div className='about-dropdown-column'>
+                                <h4 className='about-dropdown-title'>About Us</h4>
+                                <ul className='about-dropdown-list'>
+                                    {aboutMenuData.map((item) => (
+                                        <li 
+                                            key={item.name}
+                                            className='about-dropdown-item'
+                                            onClick={(e) => handleAboutItemClick(e, item.link)}
+                                        >
+                                            <span className='about-dropdown-text'>{item.name}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* SIMPLIFIED MEGA MENU - 2 LEVELS ONLY */}
                 {isMenuOpen && (
                     <div className='mega-menu-wrapper'>
                         <div className='mega-menu-container'>
                             
-                            {/* Column 1 - Main Categories */}
+                            {/* Column 1 - Main Categories (Industries/Capabilities) */}
                             <div className='mega-column'>
                                 <h4 className='mega-column-title'>Services</h4>
                                 <ul className='mega-list'>
@@ -207,70 +193,30 @@ function Header() {
                                         <li 
                                             key={item}
                                             className={`mega-item ${selectedLevel1 === item ? 'active' : ''}`}
-                                            onClick={() => handleLevel1Click(item, menuData[item].link)}
+                                            onClick={(e) => handleLevel1Click(e, item)}
                                         >
                                             <span className='mega-item-text'>{item}</span>
-                                            {hasChildren(1, item) && <span className='arrow'>→</span>}
+                                            <span className='arrow'>→</span>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
 
-                            {/* Column 2 - Sub Categories */}
+                            {/* Column 2 - Level 2 Items (Final clickable items) */}
                             <div className='mega-column'>
                                 <h4 className='mega-column-title'>{selectedLevel1}</h4>
                                 <ul className='mega-list'>
                                     {getLevel2Items().map((item) => (
                                         <li 
                                             key={item.name}
-                                            className={`mega-item ${selectedLevel2 === item.name ? 'active' : ''}`}
-                                            onClick={() => handleLevel2Click(item)}
+                                            className='mega-item'
+                                            onClick={(e) => handleLevel2Click(e, item)}
                                         >
                                             <span className='mega-item-text'>{item.name}</span>
-                                            {selectedLevel1 === 'Capabilities' && hasChildren(2, item.name) && (
-                                                <span className='arrow'>→</span>
-                                            )}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-
-                            {/* Column 3 - Level 3 (Only for Capabilities) */}
-                            {selectedLevel1 === 'Capabilities' && getLevel3Items().length > 0 && (
-                                <div className='mega-column'>
-                                    <h4 className='mega-column-title'>{selectedLevel2}</h4>
-                                    <ul className='mega-list'>
-                                        {getLevel3Items().map((item) => (
-                                            <li 
-                                                key={item.name}
-                                                className={`mega-item ${selectedLevel3 === item.name ? 'active' : ''}`}
-                                                onClick={() => handleLevel3Click(item)}
-                                            >
-                                                <span className='mega-item-text'>{item.name}</span>
-                                                {hasChildren(3, item.name) && <span className='arrow'>→</span>}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-
-                            {/* Column 4 - Level 4 (Only if exists) */}
-                            {selectedLevel1 === 'Capabilities' && getLevel4Items().length > 0 && (
-                                <div className='mega-column'>
-                                    <h4 className='mega-column-title'>{selectedLevel3}</h4>
-                                    <ul className='mega-list'>
-                                        {getLevel4Items().map((item) => (
-                                            <li 
-                                                key={item.name} 
-                                                className='mega-item'
-                                                onClick={() => handleLevel4Click(item)}
-                                            >
-                                                <span className='mega-item-text'>{item.name}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
 
                         </div>
                     </div>

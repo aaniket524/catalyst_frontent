@@ -59,9 +59,9 @@ function Footer() {
                 We use our creative skills to translate these requirements and practical design solutions.
               </p>
               <p className="footer-details-title">Call Us Now:</p>
-              <p className="footer-details">+91 8989898989</p>
+              <p className="footer-details">+91 9772222392</p>
               <p className="footer-details-title">Send us an email:</p>
-              <p className="footer-details">Accounts@CATALYSTOUTSOURCE.COM</p>
+              <p className="footer-details">accounts@catalystoutsource.com</p>
               <div className="footer-icons">
                 <div className="footer-icon"><FontAwesomeIcon icon={faFacebook} className="fi" /></div>
                 <div className="footer-icon"><FontAwesomeIcon icon={faInstagram} className="fi" /></div>

@@ -29,7 +29,7 @@
 .hero-heading{
     color: #FDFDE1;
     font-family: var(--heading-font);
-    font-size: 75px;
+    font-size: 55px;
     font-weight: 700;
     line-height: 1em;
     letter-spacing: -1px;
@@ -106,6 +106,7 @@
 }
 .hero-top-image{
     transition-duration: 1s;
+     background-color: black;
     border-style: solid;
     border-width: 5px 5px 5px 5px;
     border-color: #FDFDE1;
@@ -133,7 +134,7 @@
     .hero-heading{
         color: #FDFDE1;
         font-family: var(--heading-font);
-        font-size: 70px !important;
+        font-size: 55px !important;
             font-weight: 700;
         line-height: 1em;
         letter-spacing: -1px;
@@ -223,7 +224,7 @@
     .hero-heading{
         color: #FDFDE1;
         font-family: var(--heading-font);
-        font-size: 80px !important;
+        font-size: 55px !important;
             font-weight: 700;
         line-height: 1em;
         letter-spacing: -1px;
@@ -233,6 +234,7 @@
         border-style: solid;
         border-width: 5px 5px 5px 5px;
         border-color: #FDFDE1;
+        background-color: black;
         border-radius: 20px 20px 20px 20px;
         width:100% !important;
         height: 100% !important;

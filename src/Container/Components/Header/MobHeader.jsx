@@ -4,12 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import cross from '../../../assests/cross-svgrepo-com.svg';
+import cross from '../../../assests/cross-svgrepo-com.svg.svg';
 import dots from '../../../assests/menu-svgrepo-com.svg';
 import mainlogo from '../../../assests/updatedlogo.png';
+
 function MobHeader() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const [expandedMenus, setExpandedMenus] = useState({
+        about: false,
         services: false,
         industries: false,
         capabilities: false,
@@ -22,16 +24,24 @@ function MobHeader() {
     
     const navigate = useNavigate();
 
-    // Menu Data Structure with Links (same as desktop)
+    // About Us Menu Data
+    const aboutMenuData = [
+        { name: 'About Company', link: '/about-us' },
+        { name: 'Our Board Members', link: '/our-board-member' },
+        { name: 'Our Leadership', link: '/our-leadership' }
+    ];
+
+    // Services Menu Data Structure with Links
     const menuData = {
         Industries: {
             link: '/our-services/industries',
             items: [
-                { name: 'Banking and Capital Markets', link: '/our-services/industries/banking-capital-markets' },
-                { name: 'Insurance', link: '/our-services/industries/insurance' },
                 { name: 'Consumer Goods and Retail', link: '/our-services/industries/consumer-goods-retail' },
-                { name: 'Life Sciences & Healthcare', link: '/our-services/industries/life-sciences-healthcare' },
                 { name: 'Manufacturing', link: '/our-services/industries/manufacturing' },
+                { name: 'Life Sciences & Healthcare', link: '/our-services/industries/life-sciences-healthcare' },
+                { name: 'Private Equity', link: '/our-services/industries/private-equity' },
+                { name: 'Insurance', link: '/our-services/industries/insurance' },
+                { name: 'Banking', link: '/our-services/industries/banking' },
                 { name: 'High Tech, Media, Software', link: '/our-services/industries/high-tech-media-software' }
             ]
         },
@@ -80,6 +90,7 @@ function MobHeader() {
         // Reset expanded menus when closing sidebar
         if (isSidebarOpen) {
             setExpandedMenus({
+                about: false,
                 services: false,
                 industries: false,
                 capabilities: false,
@@ -95,6 +106,7 @@ function MobHeader() {
     const closeSidebar = () => {
         setSidebarOpen(false);
         setExpandedMenus({
+            about: false,
             services: false,
             industries: false,
             capabilities: false,
@@ -173,9 +185,31 @@ function MobHeader() {
                                 Home
                             </li>
 
-                            {/* About */}
-                            <li className="mob-m-items" onClick={() => handleLinkClick('/about-us')}>
-                                About
+                            {/* About Us - Accordion */}
+                            <li className="mob-m-items has-submenu">
+                                <div 
+                                    className="menu-item-header"
+                                    onClick={(e) => toggleMenu('about', e)}
+                                >
+                                    <span>About Us</span>
+                                    <FontAwesomeIcon 
+                                        icon={expandedMenus.about ? faChevronDown : faChevronRight} 
+                                        className="menu-arrow"
+                                    />
+                                </div>
+
+                                {/* About Us Submenu */}
+                                <ul className={`mob-submenu level-1 ${expandedMenus.about ? 'expanded' : ''}`}>
+                                    {aboutMenuData.map((item, index) => (
+                                        <li 
+                                            key={index}
+                                            className="mob-submenu-item"
+                                            onClick={() => handleLinkClick(item.link)}
+                                        >
+                                            {item.name}
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
 
                             {/* Services - Main Accordion */}
@@ -184,7 +218,7 @@ function MobHeader() {
                                     className="menu-item-header"
                                     onClick={(e) => toggleMenu('services', e)}
                                 >
-                                    <span>Services</span>
+                                    <span>Our Services</span>
                                     <FontAwesomeIcon 
                                         icon={expandedMenus.services ? faChevronDown : faChevronRight} 
                                         className="menu-arrow"
@@ -200,7 +234,10 @@ function MobHeader() {
                                             className="submenu-header"
                                             onClick={(e) => toggleMenu('industries', e)}
                                         >
-                                            <span onClick={() => handleLinkClick(menuData.Industries.link)}>
+                                            <span onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleLinkClick(menuData.Industries.link);
+                                            }}>
                                                 Industries
                                             </span>
                                             <FontAwesomeIcon 
@@ -229,7 +266,10 @@ function MobHeader() {
                                             className="submenu-header"
                                             onClick={(e) => toggleMenu('capabilities', e)}
                                         >
-                                            <span onClick={() => handleLinkClick(menuData.Capabilities.link)}>
+                                            <span onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleLinkClick(menuData.Capabilities.link);
+                                            }}>
                                                 Capabilities
                                             </span>
                                             <FontAwesomeIcon 
@@ -247,7 +287,10 @@ function MobHeader() {
                                                     className="submenu-header"
                                                     onClick={(e) => toggleMenu('businessServices', e)}
                                                 >
-                                                    <span onClick={() => handleLinkClick('/our-services/capabilities/business-services')}>
+                                                    <span onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleLinkClick('/our-services/capabilities/business-services');
+                                                    }}>
                                                         Business Services
                                                     </span>
                                                     <FontAwesomeIcon 
@@ -265,7 +308,10 @@ function MobHeader() {
                                                             className="submenu-header"
                                                             onClick={(e) => toggleMenu('accountsPayable', e)}
                                                         >
-                                                            <span onClick={() => handleLinkClick('/our-services/capabilities/business-services/accounts-payable')}>
+                                                            <span onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleLinkClick('/our-services/capabilities/business-services/accounts-payable');
+                                                            }}>
                                                                 Accounts Payable
                                                             </span>
                                                             {menuData.Capabilities.children['Business Services'].children['Accounts Payable'].length > 0 && (
@@ -316,7 +362,10 @@ function MobHeader() {
                                                     className="submenu-header"
                                                     onClick={(e) => toggleMenu('digitalIT', e)}
                                                 >
-                                                    <span onClick={() => handleLinkClick('/our-services/capabilities/digital-and-it')}>
+                                                    <span onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleLinkClick('/our-services/capabilities/digital-and-it');
+                                                    }}>
                                                         Digital & IT
                                                     </span>
                                                     <FontAwesomeIcon 
@@ -342,11 +391,6 @@ function MobHeader() {
                                     </li>
                                 </ul>
                             </li>
-
-                            {/* Blogs */}
-                            {/* <li className="mob-m-items" onClick={() => handleLinkClick('/blogs')}>
-                                Blogs
-                            </li> */}
 
                             {/* Contact Us */}
                             <li className="mob-m-items" onClick={() => handleLinkClick('/contact-us')}>

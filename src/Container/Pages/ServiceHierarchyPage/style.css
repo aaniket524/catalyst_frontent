@@ -82,7 +82,8 @@ box-shadow: #031B4E 4px 4px 0px 0px;
     cursor: pointer;
 }
 .aboutsubservice {
-    margin: 100px 30px 30px 30px; 
+    margin: 50px 30px 0px 30px; 
+    margin-bottom: 50px !important;
     color: #1A1A1A; 
     font-family: "Inter", sans-serif;
     font-size: 20px; 
@@ -95,6 +96,49 @@ box-shadow: #031B4E 4px 4px 0px 0px;
     border-right: 4px solid #F6871F;
     background-color: #FFFDF9; 
     border-radius: 10px;
+}
+
+.subcards{
+   display: flex;
+    gap: 20px;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    margin-top:50px;
+    margin-bottom:40px
+
+}
+.subcard-main{
+
+     width: 49.2%;
+    border: 2px solid #031B4E;
+    border-radius: 20px;
+    padding: 25px;
+}
+.subcard-main:hover{
+    transition-duration: 1s;
+box-shadow: #031B4E 4px 4px 0px 0px;
+;}
+.fulldescript h2{
+    margin-top: 50px;
+}
+.subcard .fulldescript ul, p{
+    padding-bottom: 0px !important;
+    margin-bottom: -1px !important;
+}
+.fulldescript{
+    margin: 30px 30px 30px 30px; 
+    color: #1A1A1A; 
+    font-family: "Inter", sans-serif;
+    font-size: 20px; 
+    font-weight: 500; 
+    line-height: 36px; 
+    text-align: justify; 
+    letter-spacing: 0.2px; 
+    padding: 0 15px; 
+    
 }
 
 

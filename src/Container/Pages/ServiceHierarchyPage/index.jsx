@@ -3,6 +3,7 @@ import './style.css';
 import { useLocation, Link } from "react-router-dom";
 import axios from "axios";
 import AllPageHeader from "../../Components/AllPageHeader"; // adjust path if needed
+import DesignSolution from "../../Components/DesignSolution";
 
 // Card component — shows only one level
 function ServiceCard({ service }) {
@@ -18,6 +19,7 @@ function ServiceCard({ service }) {
 
             <h4 className="ds-g-title">{service.title}</h4>
             <p className="ds-g-desc">{service.shortdesc}</p>
+            
 
             <Link to={`/our-services/${service.fullPath}`}>
                 <img
@@ -124,16 +126,55 @@ function ServiceHierarchyPage() {
                 title={service.title} 
                 breadcrumb={breadcrumbString} 
             />
+            
 
             <p className="aboutsubservice" >{service.shortdesc}</p>
- 
+            {service.fulldesc && service.fulldesc.trim() !== "" && (
+                <p
+                    className="fulldescript"
+                    dangerouslySetInnerHTML={{ __html: service.fulldesc }}
+                />
+            )}
+            {[
+                service.fulldesc1,
+                service.fulldesc2,
+                service.fulldesc3,
+                service.fulldesc4,
+                service.fulldesc5,
+                service.fulldesc6,
+            ].some(desc => desc) && (
+                <div className="subcards">
+                    {[
+                        service.fulldesc1,
+                        service.fulldesc2,
+                        service.fulldesc3,
+                        service.fulldesc4,
+                        service.fulldesc5,
+                        service.fulldesc6,
+                    ]
+                        .filter(desc => desc && desc.trim() !== "")
+                        .map((desc, index) => (
+                            <div className="subcard-main" key={index}>
+                                <p
+                                    className="fulldescript"
+                                    dangerouslySetInnerHTML={{ __html: desc }}
+                                />
+                            </div>
+                        ))}
+                </div>
+            )}
+
+
             {service.children && service.children.length > 0 && (
                 <div className="designsolution-main">
                     {service.children.map((child) => (
                         <ServiceCard key={child.id} service={child} />
                     ))}
                 </div>
+                
             )}
+            
+            
         </div>
     );
 }

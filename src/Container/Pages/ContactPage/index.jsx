@@ -100,7 +100,7 @@ function ContactPage(){
                     </div>
                     <div className="cp-infocard-details">
                     <h4 className="cp-info-title">Call Us</h4>
-                    <p className="cp-info-more">+91 8989898989</p>
+                    <p className="cp-info-more">+91 9772222392</p>
                     </div>
                 </div>
                 <div className="cp-info-card1">
@@ -118,7 +118,7 @@ function ContactPage(){
                     </div>
                     <div className="cp-infocard-details">
                     <h4 className="cp-info-title">Address</h4>
-                    <p className="cp-info-more">55 Golf Corse Road, Gurgaon, India</p>
+                    <p className="cp-info-more">ES-177 Gulmohar Gardens, Bhatawala, Vatika Road, Watika Jaipur Rajasthan India 303905</p>
                     </div>
                 </div>
             </div>
