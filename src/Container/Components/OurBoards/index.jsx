@@ -31,7 +31,7 @@ function OurBoards(params) {
               <div className='ourboards-card'>
               <div className='ourboards-img-wrapper'>
                 <img
-                  src={`http://127.0.0.1:8000${data.image}`}
+                  src={`http://api.catalystoutsource.com/${data.image}`}
                   className='ourboards-img'
                 />
                 <div className='ourboards-icons'>

@@ -31,7 +31,7 @@ function HomeTeam(params) {
               <div className='hometeam-card'>
               <div className='hometeam-img-wrapper'>
                 <img
-                  src={`http://127.0.0.1:8000${data.image}`}
+                  src={`http://api.catalystoutsource.com/${data.image}`}
                   className='hometeam-img'
                 />
                 <div className='hometeam-icons'>

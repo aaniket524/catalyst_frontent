@@ -51,7 +51,7 @@ function HomeTestimonials(){
   
                       <div className="hometestimonial-user">
                           <div className="hometestimonial-user-img">
-                              <img src={`http://127.0.0.1:8000${data.image}`}
+                              <img src={`http://api.catalystoutsource.com/${data.image}`}
                               className="hometestimonial-user-image img-fluid"/>
                           </div>
                           <div className="hometestimonial-user-name">

@@ -79,7 +79,7 @@ function SingleService(params) {
                             </p>
                             <div className="ssg1-1-ul">
                                 <div className="ssg1-1icon">
-                                    <img src={`http://127.0.0.1:8000${singleserv.processicon1}`}
+                                    <img src={`http://api.catalystoutsource.com/${singleserv.processicon1}`}
                                     className="ssg1-1icon-img img-fluid"/>
                                 </div>
                                 <div className="ssg1-1-txt" dangerouslySetInnerHTML={{__html:singleserv.process}}>
@@ -95,7 +95,7 @@ function SingleService(params) {
                         </div>
                         <div className="ssg1-1offset"></div>
                         <div className="ssg1-2">
-                            <img src={`http://127.0.0.1:8000${singleserv.moreimg}`}
+                            <img src={`http://api.catalystoutsource.com/${singleserv.moreimg}`}
                             className="ssg1-2-img img-fluid"/>
                         </div>
                     </div>

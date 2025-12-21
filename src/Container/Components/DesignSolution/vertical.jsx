@@ -45,7 +45,7 @@ function Vertical({ limit = null }) {
                   
                   <div className="ds-g-image">
                     <img
-                      src={`http://127.0.0.1:8000${data.thumbimg}`}
+                      src={`http://api.catalystoutsource.com/${data.thumbimg}`}
                       className="ds-g-img img-fluid"
                       alt={data.title}
                     />
@@ -61,7 +61,7 @@ function Vertical({ limit = null }) {
 
                   <Link to={`/our-services/${data.slug}`}>
                     <img
-                      src={`http://127.0.0.1:8000${data.redirecticon}`}
+                      src={`http://api.catalystoutsource.com/${data.redirecticon}`}
                       className="redirect-icon img-fluid"
                       alt="redirect icon"
                     />

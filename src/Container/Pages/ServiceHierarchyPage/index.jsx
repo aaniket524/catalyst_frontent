@@ -11,7 +11,7 @@ function ServiceCard({ service }) {
         <div className="designsolution-grid1">
             {/* <div className="ds-g-image">
                 <img
-                    src={`http://127.0.0.1:8000${service.thumbimg}`}
+                    src={`http://api.catalystoutsource.com/${service.thumbimg}`}
                     alt={service.title}
                     className="ds-g-img img-fluid"
                 />
@@ -23,7 +23,7 @@ function ServiceCard({ service }) {
 
             <Link to={`/our-services/${service.fullPath}`}>
                 <img
-                    src={`http://127.0.0.1:8000${service.redirecticon}`}
+                    src={`http://api.catalystoutsource.com/${service.redirecticon}`}
                     className="redirect-icon img-fluid"
                     alt="Go"
                 />
