@@ -1,0 +1,190 @@
+.who-we-are-glass {
+  position: relative;
+  padding: 140px 30px;
+  max-width: 1420px;
+  margin: 0 auto;
+
+  overflow: hidden;
+  background: url("/images/consulting-bg.jpg") center/cover no-repeat;
+}
+
+/* Dark Overlay */
+.who-overlay {
+  position: absolute;
+  inset: 0;
+ 
+}
+
+.who-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.who-header {
+  max-width: 920px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.who-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  font-weight: 600;
+  color: #031B4E;
+  text-transform: uppercase;
+}
+
+.who-title {
+  font-family: var(--heading-font);
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #031B4E;
+  margin-bottom: 24px;
+}
+
+.who-description {
+  font-family: var(--body-font);
+  font-size: 20px;
+  line-height: 30px;
+  color: #0C0C0C;
+}
+
+.who-description strong {
+  color: #031B4E;
+  font-weight: 600;
+}
+
+/* Grid */
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Glass Cards */
+.who-card {
+  padding: 36px;
+  border-radius: 22px;
+  background: #ffffff;
+  backdrop-filter: blur(14px);
+  border: 2px solid #031B4E;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.who-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px #031B4E;
+}
+
+.who-card h4 {
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: #031B4E;
+  margin-bottom: 14px;
+}
+
+.who-card p {
+  font-family: var(--body-font);
+  font-size: 17px;
+  line-height: 27px;
+  color: #0C0C0C;
+}
+
+/* ================= Responsive ================= */
+
+@media screen and (max-width: 1100px) {
+  .who-title {
+    font-size: 52px;
+  }
+
+  .who-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .who-we-are-glass {
+    padding: 90px 24px;
+  }
+
+  .who-title {
+    font-size: 40px;
+  }
+
+  .who-description {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .who-title {
+    font-size: 34px;
+  }
+
+  .who-card {
+    padding: 28px;
+  }
+
+  .who-card h4 {
+    font-size: 20px;
+  }
+
+  .who-card p {
+    font-size: 15px;
+  }
+}
+.why-choose-section {
+  padding: 120px 30px;
+  background: #ffffff;
+  border-radius: 32px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.why-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.14),
+    rgba(255,255,255,0.06)
+  );
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: all 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+  border-color: #ffffff;
+}
+
+.why-card h4 {
+  color: #031B4E;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: #0C0C0C;
+  font-size: 16px;
+  line-height: 26px;
+}
+.who-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 14px;
+  display: block;
+  margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 .scrollicon{
-    font-size: 20px;
+    font-size: 18px;
   
 }
 .scrolltop{
@@ -8,12 +8,12 @@
     right: 10px;
     display: flex;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid #031B4E;
     background-color: var(--accent-color);
-    color: black;
+    color: #031B4E;
     z-index: 20000 !important;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 50%;
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     border: 2px solid var(--accent-color);
-    background-color: black;
+    background-color: #031B4E;
     color: var(--accent-color);
     z-index: 20000 !important;
     padding-left: 22px;

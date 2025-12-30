@@ -9,17 +9,17 @@ import HomeTestimonials from "../../Components/HomeTestimonials";
 import HomeMarquee from "../../Components/HomeMarquee";
 import HomeTeam from "../../Components/HomeTeam";
 import Slider from "../../Components/Slider";
+import Whoweare from "../../Components/WhoAreWe";
 
 function HomePage(params) {
     return(
         <>
         <Slider/>
          
-         <DesignSolution  limit={4} />
+         <Whoweare/>
          <Hero/> 
          <StandOutSection/>
-         <ProjectRange/>
-         <WorkProcess/> 
+         <ProjectRange/> 
          <HomeTestimonials/>
          <HomeMarquee/>
 

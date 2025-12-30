@@ -19,8 +19,8 @@ function Leadership() {
           </div>
 
           <div className="col-lg-8">
-            <h2 className="leadership-title">Message from Our Founder & CEO</h2>
-            <h4 className="leadership-name">Manoj Malik</h4>
+            <h2 className="leadership-title">Manoj Malik</h2>
+
             <p className="leadership-role">Founder & Chief Executive Officer</p>
 
             <p className="leadership-text">
@@ -31,7 +31,7 @@ function Leadership() {
 
             <p className="leadership-text">
               Before founding Catalyst Outsource, Manoj led multi-tower finance functions at
-              <strong> Genpact</strong>, managing teams across the USA, Canada, and 12 Latin American
+              <strong> Multinational Company</strong>, managing teams across the USA, Canada, and 12 Latin American
               countries. He spearheaded automation and compliance initiatives that set industry
               benchmarks.
             </p>
