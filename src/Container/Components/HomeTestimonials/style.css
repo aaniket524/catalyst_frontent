@@ -251,3 +251,8 @@
     }
 }
 
+.hometestimonial-user-image {
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover; /* ensures the image stays circular without stretching */
+}

@@ -44,7 +44,7 @@
     border-radius: 20px ; 
 }
 .projectrange-image{
-    border: 4px solid white;
+    /* border: 4px solid white; */
     border-radius: 20px ;
     /* scale: 0.9; */
 
@@ -107,8 +107,8 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 0px;
-        background-color: var(--black-bg);
-        max-width: 1420px;
+        max-width: 1420px;        /* background-color: var(--black-bg); */
+
         overflow: hidden;
         justify-self: center 
     }
@@ -148,7 +148,7 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 80px;
-        background-color: var(--black-bg);
+        /* background-color: var(--black-bg); */
         max-width: 1420px;
         overflow: hidden;
         justify-self: center 
@@ -195,7 +195,7 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 80px;
-        background-color: var(--black-bg);
+        /* background-color: var(--black-bg); */
         max-width: 1420px;
         overflow: hidden;
         justify-self: center 

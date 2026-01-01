@@ -1,5 +1,7 @@
 import React from "react";
 import './style.css'
+import Project1 from '../../../assests/project1.png';
+import Project2 from '../../../assests/project2.png';
 function ProjectRange(params) {
     
   const cards = [
@@ -15,16 +17,16 @@ function ProjectRange(params) {
         <div className="projectrange">
             <div className="projectrange-h">
                 <h1 className="projectrange-heading">
-                Some of our Automation projects
+                Smarter Automation, Faster outcomes
                 </h1>
             </div>
             <div className="projectrange-container">
                 <div className="pr-box1">
                 <div className="pr-box-img">
-                <img src="https://favdevs.com/demos/wp/aximo/wp-content/uploads/2023/12/project1.png"
+                <img src={Project1}
                     className="projectrange-image img-fluid"/>
                 </div>
-                <div className="pr-box-content">
+                {/* <div className="pr-box-content">
                     <div className='pr-box-content-part'>
                     <h4 className="pr-box-title">
                         Project Design
@@ -38,15 +40,15 @@ function ProjectRange(params) {
                     viewBox="0 0 34 28" fill="none">
                     <path d="M19.9795 2C19.9795 2 20.5 8 25.9795 11.2C28.4887 12.6653 31.9795 14 31.9795 14M31.9795 14H2M31.9795 14C31.9795 14 28.5339 15.415 25.9795 16.8C19.9795 20.0533 19.9795 26 19.9795 26" stroke="#FDFDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </div>
-                </div>
+                </div> */}
                 </div>
                 <div className="pr-box1">
                 <div className="pr-box-img">
-                <img src="https://favdevs.com/demos/wp/aximo/wp-content/uploads/2023/12/project2.png"
+                <img src={Project2}
                     className="projectrange-image img-fluid"/>
                 </div>
                 <div className="pr-box-content">
-                    <div className='pr-box-content-part'>
+                    {/* <div className='pr-box-content-part'>
                     <h4 className="pr-box-title">
                         Project Design
                     </h4>
@@ -58,7 +60,7 @@ function ProjectRange(params) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="28" 
                     viewBox="0 0 34 28" fill="none">
                     <path d="M19.9795 2C19.9795 2 20.5 8 25.9795 11.2C28.4887 12.6653 31.9795 14 31.9795 14M31.9795 14H2M31.9795 14C31.9795 14 28.5339 15.415 25.9795 16.8C19.9795 20.0533 19.9795 26 19.9795 26" stroke="#FDFDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </div>
+                    </div> */}
                 </div>
                 </div>
             </div>
