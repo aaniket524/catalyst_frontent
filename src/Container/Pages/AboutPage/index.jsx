@@ -4,10 +4,10 @@ import StandOutSection from "../../Components/StandOutSection";
 import HomeMarquee from "../../Components/HomeMarquee";
 import HomeTeam from "../../Components/HomeTeam";
 import AllPageHeader from "../../Components/AllPageHeader";
-import About1 from "../../../assests/aboutimage1.JPG";
-import About2 from "../../../assests/aboutimage2.JPG";
-import About3 from "../../../assests/aboutimage3.JPG";
-import About4 from "../../../assests/aboutimage4.JPG";
+import About1 from "../../../assests/aboutimage1.jpg";
+import About2 from "../../../assests/aboutimage2.jpg";
+import About3 from "../../../assests/aboutimage3.jpg";
+import About4 from "../../../assests/aboutimage4.jpg";
 
 function AboutPage(){
     return(

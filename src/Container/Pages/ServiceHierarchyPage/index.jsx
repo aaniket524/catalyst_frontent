@@ -9,6 +9,7 @@ import DesignSolution from "../../Components/DesignSolution";
 function ServiceCard({ service }) {
     return (
         <div className="designsolution-grid1">
+            <Link to={`/our-services/${service.fullPath}`}>
             {/* <div className="ds-g-image">
                 <img
                     src={`http://api.catalystoutsource.com/${service.thumbimg}`}
@@ -21,12 +22,13 @@ function ServiceCard({ service }) {
             <p className="ds-g-desc">{service.shortdesc}</p>
             
 
-            <Link to={`/our-services/${service.fullPath}`}>
+            
                 <img
                     src={`http://api.catalystoutsource.com/${service.redirecticon}`}
                     className="redirect-icon img-fluid"
                     alt="Go"
                 />
+            
             </Link>
         </div>
     );
