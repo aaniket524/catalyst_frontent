@@ -16,7 +16,7 @@ function Vertical({ limit = null }) {
 
   const fetchData = async () => {
     const response = await axios.get(
-      "http://api.catalystoutsource.com/backend/multiservice/"
+      "https://api.catalystoutsource.com/backend/multiservice/"
     );
     setService(response.data);
   };
@@ -45,7 +45,7 @@ function Vertical({ limit = null }) {
                   
                   <div className="ds-g-image">
                     <img
-                      src={`http://api.catalystoutsource.com/${data.thumbimg}`}
+                      src={`https://api.catalystoutsource.com/${data.thumbimg}`}
                       className="ds-g-img img-fluid"
                       alt={data.title}
                     />
@@ -61,7 +61,7 @@ function Vertical({ limit = null }) {
 
                   <Link to={`/our-services/${data.slug}`}>
                     <img
-                      src={`http://api.catalystoutsource.com/${data.redirecticon}`}
+                      src={`https://api.catalystoutsource.com/${data.redirecticon}`}
                       className="redirect-icon img-fluid"
                       alt="redirect icon"
                     />

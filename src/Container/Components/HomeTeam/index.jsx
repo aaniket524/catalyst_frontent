@@ -9,7 +9,7 @@ import axios from 'axios';
 function HomeTeam(params) {
   const [team, setTeam] = useState([])
   const fetchData=async()=>{
-    const response = await axios.get('http://api.catalystoutsource.com/backend/team/')
+    const response = await axios.get('https://api.catalystoutsource.com/backend/team/')
     setTeam(response.data)
     console.log(response.data)
     console.log(team)
@@ -31,7 +31,7 @@ function HomeTeam(params) {
               <div className='hometeam-card'>
               <div className='hometeam-img-wrapper'>
                 <img
-                  src={`http://api.catalystoutsource.com/${data.image}`}
+                  src={`https://api.catalystoutsource.com/${data.image}`}
                   className='hometeam-img'
                 />
                 <div className='hometeam-icons'>

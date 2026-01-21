@@ -9,7 +9,7 @@ import axios from 'axios';
 function OurBoards(params) {
   const [team, setTeam] = useState([])
   const fetchData=async()=>{
-    const response = await axios.get('http://api.catalystoutsource.com/backend/boardmember/')
+    const response = await axios.get('https://api.catalystoutsource.com/backend/boardmember/')
     setTeam(response.data)
     console.log(response.data)
     console.log(team)
@@ -31,7 +31,7 @@ function OurBoards(params) {
               <div className='ourboards-card'>
               <div className='ourboards-img-wrapper'>
                 <img
-                  src={`http://api.catalystoutsource.com/${data.image}`}
+                  src={`https://api.catalystoutsource.com/${data.image}`}
                   className='ourboards-img'
                 />
                 <div className='ourboards-icons'>

@@ -4,7 +4,7 @@ import axios from "axios";
 function HomeTestimonials(){
     const [ testimonials, setTestimonials] = useState([])
     const fetchData=async()=>{
-        const response = await axios.get('http://api.catalystoutsource.com/backend/testimonials')
+        const response = await axios.get('https://api.catalystoutsource.com/backend/testimonials')
         setTestimonials(response.data)
     }
     useEffect(()=>{
@@ -51,7 +51,7 @@ function HomeTestimonials(){
   
                       <div className="hometestimonial-user">
                           <div className="hometestimonial-user-img">
-                              <img src={`http://api.catalystoutsource.com/${data.image}` }
+                              <img src={`https://api.catalystoutsource.com/${data.image}` }
                               className="hometestimonial-user-image img-fluid"/>
                           </div>
                           <div className="hometestimonial-user-name">

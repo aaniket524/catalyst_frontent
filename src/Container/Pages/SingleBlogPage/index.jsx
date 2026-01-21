@@ -9,7 +9,7 @@ function SingleBlogPage(params) {
     const {slug} = useParams()
     const [blogs, setblogs] = useState([])
     const fetchData = async()=>{
-        const response = await axios.get(`http://api.catalystoutsource.com/backend/blogs/`)
+        const response = await axios.get(`https://api.catalystoutsource.com/backend/blogs/`)
         const match = response.data.find(item => item.slug === slug);
         setblogs(match)
     }
@@ -24,7 +24,7 @@ function SingleBlogPage(params) {
             blogs?.category?.name ?
             ( <div className="singleblogpage-container">
                 <div className="sbp-container1">
-                   <div className="sbpcontain-image"> <img src={`http://api.catalystoutsource.com/${blogs.thumbnail}`}
+                   <div className="sbpcontain-image"> <img src={`https://api.catalystoutsource.com/${blogs.thumbnail}`}
                     className="sbp-conainer-img img-fluid"/></div>
                      <div className="blog-card-inner-content">
                         <div className="blog-card-inner-categ">

@@ -9,7 +9,7 @@ function SingleService(params) {
     const {slug} = useParams()
     const [singleserv, setSingleServ] = useState()
     const fetchData= async()=>{    
-        const response = await axios.get(`http://api.catalystoutsource.com/backend/single-services/${slug}/`)
+        const response = await axios.get(`https://api.catalystoutsource.com/backend/single-services/${slug}/`)
         // const match = response.singleserv.find(item => item.slug === slug);
         // setSingleServ(match);
         setSingleServ(response.data);
@@ -79,7 +79,7 @@ function SingleService(params) {
                             </p>
                             <div className="ssg1-1-ul">
                                 <div className="ssg1-1icon">
-                                    <img src={`http://api.catalystoutsource.com/${singleserv.processicon1}`}
+                                    <img src={`https://api.catalystoutsource.com/${singleserv.processicon1}`}
                                     className="ssg1-1icon-img img-fluid"/>
                                 </div>
                                 <div className="ssg1-1-txt" dangerouslySetInnerHTML={{__html:singleserv.process}}>
@@ -95,7 +95,7 @@ function SingleService(params) {
                         </div>
                         <div className="ssg1-1offset"></div>
                         <div className="ssg1-2">
-                            <img src={`http://api.catalystoutsource.com/${singleserv.moreimg}`}
+                            <img src={`https://api.catalystoutsource.com/${singleserv.moreimg}`}
                             className="ssg1-2-img img-fluid"/>
                         </div>
                     </div>

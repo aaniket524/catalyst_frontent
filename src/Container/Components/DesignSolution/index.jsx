@@ -22,7 +22,7 @@ function DesignSolution({ limit = null }) {
     const [service, setService] = useState([]);
 
     const fetchData = async () => {
-        const response = await axios.get('http://api.catalystoutsource.com/backend/multiservice/');
+        const response = await axios.get('https://api.catalystoutsource.com/backend/multiservice/');
         setService(response.data);
     };
 
@@ -47,12 +47,12 @@ function DesignSolution({ limit = null }) {
                             return (
                                 <div className="designsolution-grid1" key={data.id}>
                                     <div className="ds-g-image">
-                                        <img src={`http://api.catalystoutsource.com/${data.thumbimg}`} className="ds-g-img img-fluid" />
+                                        <img src={`https://api.catalystoutsource.com/${data.thumbimg}`} className="ds-g-img img-fluid" />
                                     </div>
                                     <h4 className="ds-g-title">{data.title}</h4>
                                     <p className="ds-g-desc">{data.shortdesc}</p>
                                     <Link to={`/our-services/${fullPath}`}>
-                                        <img src={`http://api.catalystoutsource.com/${data.redirecticon}`} className="redirect-icon img-fluid" />
+                                        <img src={`https://api.catalystoutsource.com/${data.redirecticon}`} className="redirect-icon img-fluid" />
                                     </Link>
                                 </div>
                             );

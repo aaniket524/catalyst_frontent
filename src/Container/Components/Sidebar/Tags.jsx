@@ -7,7 +7,7 @@ import axios from "axios";
 function Tags(params) {
     const [tags, setTags] = useState([])
     const fetchData = async()=>{
-        const response = await axios.get('http://api.catalystoutsource.com/backend/blogs/')
+        const response = await axios.get('https://api.catalystoutsource.com/backend/blogs/')
         setTags(response.data)
     }
 

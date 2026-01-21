@@ -16,7 +16,7 @@ function WorkProcess() {
     };
     
     const fetchData = async () => {
-        const response = await axios.get('http://api.catalystoutsource.com/backend/workprocess/');
+        const response = await axios.get('https://api.catalystoutsource.com/backend/workprocess/');
         setWorkProcess(response.data);
     };
 
@@ -49,9 +49,9 @@ function WorkProcess() {
                                     <h4 className="workprocess-h">{process.title}</h4>
                                     <div className="workprocess-cicons-actiive">
                                         {activeIndex === index ? (
-                                            <img src={`http://api.catalystoutsource.com/${process.inactiveIcon}`} alt="Inactive Icon" />
+                                            <img src={`https://api.catalystoutsource.com/${process.inactiveIcon}`} alt="Inactive Icon" />
                                         ) : (
-                                            <img src={`http://api.catalystoutsource.com/${process.activeIcon}`} alt="Active Icon" />
+                                            <img src={`https://api.catalystoutsource.com/${process.activeIcon}`} alt="Active Icon" />
                                         )}
                                     </div>
                                     <div className="workprocess-cicons-inactive"></div>

@@ -12,7 +12,7 @@ function ServiceCard({ service }) {
             <Link to={`/our-services/${service.fullPath}`}>
             {/* <div className="ds-g-image">
                 <img
-                    src={`http://api.catalystoutsource.com/${service.thumbimg}`}
+                    src={`https://api.catalystoutsource.com/${service.thumbimg}`}
                     alt={service.title}
                     className="ds-g-img img-fluid"
                 />
@@ -24,7 +24,7 @@ function ServiceCard({ service }) {
 
             
                 <img
-                    src={`http://api.catalystoutsource.com/${service.redirecticon}`}
+                    src={`https://api.catalystoutsource.com/${service.redirecticon}`}
                     className="redirect-icon img-fluid"
                     alt="Go"
                 />
@@ -91,7 +91,7 @@ function ServiceHierarchyPage() {
     useEffect(() => {
         const fetchService = async () => {
             try {
-                const response = await axios.get('http://api.catalystoutsource.com/backend/multiservice/');
+                const response = await axios.get('https://api.catalystoutsource.com/backend/multiservice/');
                 const allServices = response.data.map(s => addFullPath(s));
 
                 // Convert current URL path into array of slugs
