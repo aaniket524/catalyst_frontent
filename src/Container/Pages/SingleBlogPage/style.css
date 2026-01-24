@@ -19,10 +19,12 @@
     width: 35%;
 }
 .sbp-title{
+    padding-top: 20px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     color: var(--heading-color);
+    padding-bottom: 15px;
 }
 
 .spb-p{

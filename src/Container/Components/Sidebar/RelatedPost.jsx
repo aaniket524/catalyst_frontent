@@ -31,11 +31,17 @@ function RelatedPost(params) {
                             className="rpg-img img-fluid"/>
                         </div>
                         <div className="recent-post-grid-content">
-                        <p className="rp-g-date">
-                        {data.created_at}</p>
+                        {/* <p className="rp-g-date">
+                        {new Date(data.created_at).toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+})}</p> */}
                        <Link to={`/blogs/${CreateSlug(data.category.name)}/${CreateSlug(data.title)}`}>
                         <p className="rp-g-heading">
-                            {data.title}
+                            {data.title.length > 50
+  ? data.title.slice(0, 50) + "..."
+  : data.title}
                         </p>
                         </Link>
                         </div>

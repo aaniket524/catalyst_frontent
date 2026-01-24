@@ -145,6 +145,8 @@ border: 1px solid var(--accent-color);
 
 }
 .blog-c-btn{
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: transparent;
     border: none;
     font-weight: 700;

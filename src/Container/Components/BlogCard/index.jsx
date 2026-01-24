@@ -53,8 +53,10 @@ function BlogCard( { categorySlug = null, tagsSlug = null } ){
             return(
                 <div className="blog-card block" key={data.id} >
                 <div className="blog-card-image">
+                    <Link to={`/blogs/${(data.category.slug)}/${(data.slug)}`}>
                     <img src={`https://api.catalystoutsource.com/${data.thumbnail}`}
                     className="blog-card-img img-fluid"/>
+                    </Link>
                 </div>
                 <div className="blog-card-content">
                     <div className="blog-card-inner-content">
@@ -63,12 +65,18 @@ function BlogCard( { categorySlug = null, tagsSlug = null } ){
                         </div>
                         <div className="blog-card-inner-date">
                             <p className="bci-date">
-                           {data.created_at}</p>
+                           {new Date(data.created_at).toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+})}</p>
                         </div>
                     </div>
                     <div className="blog-card-contents">
                         <h4 className="blog-card-title">
+                            <Link to={`/blogs/${(data.category.slug)}/${(data.slug)}`}>
                             {data.title}
+                            </Link>
                         </h4>
                         <p className="blog-card-exert">
                             {data.excerpt}

@@ -18,7 +18,7 @@ function SingleBlogPage(params) {
     },[])
     return(
         <>
-        <AllPageHeader title='Blog title' breadcrumb="Home / blogs /"></AllPageHeader>
+        {/* <AllPageHeader title='Blog title' breadcrumb="Home / blogs /"></AllPageHeader> */}
         <div className="singleblogpage">
           {
             blogs?.category?.name ?
@@ -32,7 +32,11 @@ function SingleBlogPage(params) {
                         </div>
                         <div className="blog-card-inner-date">
                             <p className="bci-date">
-                            {blogs.created_at}</p>
+                                {new Date(blogs.created_at).toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+})}</p>
                         </div>
                     </div>
                     <div className="single-bp-title">
