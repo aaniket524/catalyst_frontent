@@ -148,6 +148,8 @@ function Header() {
                                 >
                                     Our Services {isMenuOpen ? '▲' : '▼'}
                                 </li>
+
+                                <Link to='/blogs'><li className='innerheader-items'>Blogs</li></Link>
                                 
                                 <Link to='/contact-us'><li className='innerheader-items'>Contact Us</li></Link>
                             </ul>

@@ -148,6 +148,7 @@ function MobHeader() {
                         />
                     </div>
 
+
                     <div className="innerheader-btn">
                         <button className="header-btn" onClick={HandleRedirect}>Contact Us</button>
                     </div>
@@ -390,6 +391,10 @@ function MobHeader() {
                                         </ul>
                                     </li>
                                 </ul>
+                            </li>
+
+                            <li className="mob-m-items" onClick={() => handleLinkClick('/blogs')}>
+                                Blogs
                             </li>
 
                             {/* Contact Us */}
